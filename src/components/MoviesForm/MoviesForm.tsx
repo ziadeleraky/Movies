@@ -7,12 +7,14 @@ const MoviesForm = () => {
         const title = (document.getElementById('title') as HTMLInputElement).value;
         const description = (document.getElementById('description') as HTMLInputElement).value;
         const release_date = (document.getElementById('release_date') as HTMLInputElement).value;
+        const poster_path = (document.getElementById('poster_path') as HTMLInputElement).value;
+
         movies.push({
             id: movies.length + 1,
             title,
             description,
             release_date,
-            poster_path: 'https://via.placeholder.com/200x300'
+            poster_path: poster_path || 'https://via.placeholder.com/200x300'
         })
         console.log(movies);
     }
