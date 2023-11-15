@@ -1,0 +1,10 @@
+.movies__header {
+    text-align: center;
+}
+
+.movies__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
