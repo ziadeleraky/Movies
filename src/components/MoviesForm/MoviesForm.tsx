@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import movies from '../../data/Movies';
 import classes from './MoviesForm.module.scss';
 
@@ -12,7 +11,8 @@ const MoviesForm = () => {
             id: movies.length + 1,
             title,
             description,
-            release_date
+            release_date,
+            poster_path: 'https://via.placeholder.com/200x300'
         })
         console.log(movies);
     }
@@ -30,6 +30,10 @@ const MoviesForm = () => {
             <div>
                 <label htmlFor="release_date">Release Date</label>
                 <input type="text" id="release_date" placeholder="release date"/>
+            </div>
+            <div>
+                <label htmlFor="poster_path">Poster Path</label>
+                <input type="text" id="poster_path" placeholder="poster path"/>
             </div>
             <button type="submit" onClick={handleClick}>Add Movie</button>
         </form>
