@@ -1,11 +1,10 @@
 import classes from './MoviesList.module.scss';
-import movies from '../../data/Movies';
 import Movie from '../Movie/Movie';
+import { IMovie } from '../../interfaces/Movie.interface';
 
-const MoviesList = () => {
+const MoviesList = ({movies}: {movies: IMovie[]}) => {
     return (
         <>
-            <h1 className={classes.movies__header}>Movies List</h1>
             <div className={classes.movies__container}>
                 {movies.map(movie => {
                     return <Movie key={movie.id} {...movie} />

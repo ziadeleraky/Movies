@@ -23,7 +23,7 @@ const movies: IMovie[] = [
         description: 'A movie about a bat',
         release_date: '2008-07-18',
         poster_path: 'https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg',
-        category: 'favourite'
+        category: 'watching'
     },
     {
         id: 4,
