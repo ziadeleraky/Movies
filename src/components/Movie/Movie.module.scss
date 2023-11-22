@@ -1,51 +1,74 @@
-.movie__container {
-    width: 25%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 4rem 1rem;
-    position: relative;
-    height: 175px;
-    color: #fff;
-}
+.movie {
+    &__container {
+        width: 25%;
+        box-shadow: 1px 1px 5px #000;
+        border-radius: 5px;
+        padding: 4rem 1rem;
+        position: relative;
+        height: 175px;
+        color: #fff;
+        overflow: hidden;
+    }
+    
+    &__title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 5;
+        text-shadow: 0px 0px 4px #000;
+        cursor: pointer;
+    }
+    
+    &__description {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 3;
+        text-shadow: 0px 0px 4px #000;
+    }
+    
+    &__release_date {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 4;
+        text-shadow: 0px 0px 4px #000;
+    }
+    
+    &__button {
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #ccc;
+        cursor: pointer;
+        position: absolute;
+        bottom: 1rem;
+        z-index: 2;
+    }
+    
+    &__poster {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
 
-.movie__container:hover {
-    border: 1px solid #000;
-}
+        &:hover{
+            transform: scale(1.1);
+            opacity: 0.5;
+        }
+    }
 
-.movie__title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.movie__description {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.movie__release_date {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.movie__button {
-    padding: 0.5rem;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #ccc;
-    cursor: pointer;
-    position: absolute;
-    bottom: 1rem;
-}
-
-.movie__poster {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    &__category {
+        position: relative;
+        z-index: 7;
+        border-radius: 10px;
+        width: 1.1rem;
+    }
 }

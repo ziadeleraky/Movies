@@ -1,0 +1,15 @@
+.movies {
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    &__heading {
+        text-align: center;
+        margin: 3rem 0 1.5rem 0;
+        color: orange;
+        font-size: 2rem;
+    }
+}

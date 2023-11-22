@@ -1,12 +1,14 @@
 .form {
+    position: absolute;
+    z-index: 101;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 1.3rem;
-    background-color: #00032b;
     min-height: 100vh;
     padding: 1rem;
     color: #fff;
+    // width: 100vw;
 
     & div {
         display: flex;
@@ -41,9 +43,16 @@
         cursor: pointer;
     }
 
-    &__category {
-        width: 220px;
-        padding: 0.5rem;
-        font-size: 1.1rem;
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.8);
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
